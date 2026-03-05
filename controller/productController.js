@@ -40,8 +40,8 @@ exports.getAllProducts = (req,res)=>{
 //Create a new User
 //crud - create
 exports.addProduct=(req,res)=> {
-    const {item_name, unit_price, qty, supp} = req.body;
-    connection.query('INSERT INTO product_info (itemName, unitPrice, quantity, supplier) VALUES (?,?,?,?)',[item_name, unit_price, qty, supp], (err,result)=> {
+    const {itemName, unitPrice, quantity, supplier} = req.body;
+    connection.query('INSERT INTO product_info (itemName, unitPrice, quantity, supplier) VALUES (?,?,?,?)',[itemName, unitPrice, quantity, supplier], (err,result)=> {
         if(err) throw err;
         res.json({message:'Product Added Successfully', userId:
         result.insertId});
@@ -77,3 +77,4 @@ exports.addProduct=(req,res)=> {
 //     });
 
 // };
+
