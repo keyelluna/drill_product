@@ -14,6 +14,7 @@ const routes = require('./routes/index.js')
 // 1. Define your allowed origins
 const allowedOrigins = [
   'http://127.0.0.1:5500',
+  'productdrill.netlify.app'
 ];
 
 const corsOptions = {
@@ -43,4 +44,5 @@ app.use('/api', routes)
 app.listen(process.env.PORT, () => {
     console.log(`Server is runnimg on Port ${process.env.PORT}`)
 })
+
 
