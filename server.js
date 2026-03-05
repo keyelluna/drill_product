@@ -16,7 +16,6 @@ const allowedOrigins = [
   'http://127.0.0.1:5500',
   'https://productdrill.netlify.app'
 ], 
-optionsSuccessStatus: 200
 
 const corsOptions = {
   origin: function (origin, callback) {
@@ -45,6 +44,7 @@ app.use('/api', routes)
 app.listen(process.env.PORT, () => {
     console.log(`Server is runnimg on Port ${process.env.PORT}`)
 })
+
 
 
 
